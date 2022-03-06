@@ -1,0 +1,198 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#new-tweet {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* .text {
+  display: flex;
+  justify-content: flex-end;
+} */
+
+.include-tweet {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 8;
+}
+
+#tweet-text {
+  display: flex;
+  justify-content: center;
+  border: none;
+  font-weight: 90000;
+  background: transparent;
+  /* color: transparent; */
+  /* margin-left: 5em; */
+  border-bottom: 3px solid black;
+  height: 50px;
+  width: 500px;
+}
+
+textarea {
+  display: flex;
+  justify-content: center;
+  /* border: none; */
+  width: 489px;
+  /* height: 239px; */
+  border-bottom: 3px solid black;
+  /* margin-right: 3em; */
+  /* margin-left: 5em; */
+  
+  
+}
+
+
+.button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: blue;
+  color: white;
+  font-family: Bungee;
+  margin-top: 0.5em;
+  /* margin-left: 5em; */
+}
+
+.counter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: -1.2em;
+  margin-bottom: 1em;
+  font-family: Bungee
+}
+
+/* Below are the styles used for the lower tweets, I will make a new file to organize these */
+
+/* :root {
+  --top: 40px;
+} */
+
+#tweet-display {
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  flex-direction: column;
+  /* height: 50px; */
+  /* margin-top: 0em; */
+  /* margin-left: 5em; */
+
+}
+
+#test-tweet {
+  display: flex;
+  justify-content: flex-start;
+  /* margin-top: 2em;
+  margin-left: -32.5em; */
+  height: 100px;
+  width: 500px;
+  border:solid 3px black;
+}
+
+#user-display {
+  display: flex;
+  font-size: 18px;
+  justify-content: flex-start;
+  /* margin-top: -3.8em;
+  margin-left: 4em; */
+ 
+  height: 10px;
+}
+
+#at-user {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  /* margin-left: 15em; */
+  
+}
+
+#placed-tweet {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  /* margin-left: 4em;  */
+  
+}
+
+#text-line {
+  display: flex;
+  /* margin-top: -1em;
+  margin-left: 3em;
+  margin-right: 3em; */
+  border-bottom: solid 3px black;
+}
+
+#interaction-icon1 {
+  display: flex;
+  /* background-color: #0000FF; */
+  display: flex;
+  flex-direction: flex-start;
+  margin-left: -4em;
+  font-size: 10px;
+  /* margin-top: 5em; */
+}
+#interaction-icon2 {
+  display: flex;
+  flex-direction: flex-start;
+  /* margin-left: 37em; */
+  margin-left: -4em;
+  font-size: 10px;
+  /* margin-top: 5em; */
+}
+
+#interaction-icon3 {
+  display: flex;
+  flex-direction: flex-start;
+  /* margin-left: 39em; */
+  margin-left: -4em;
+  font-size: 10px;
+  /* margin-top: 5em; */
+}
+
+#tweet-date {
+  display: flex;
+  /* margin-left: 1em; */
+  font-size: 10px;
+  /* margin-top: -20em; */
+
+}
+
+
+
+/* 
+<main class="container">
+    
+<section id="new-tweet">
+  <!-- <h2>Compose Tweet</h2> -->
+  <form method="POST" action="/tweets/">
+    <label for="tweet-text" id="text">What are you humming about?</label>
+    <textarea name="text" id="tweet-text"></textarea>
+    <div>
+      <button class="button" type="submit">Tweet</button>
+      <output name="counter" class="counter" for="tweet-text">140</output>
+    </div>
+  </form>
+</section>
+</main> */
+
+@media only screen and (min-width: 1024px) {
+  .root {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: -19em;
+    margin-right: 3em;
+    /* border: solid 5px red; */
+  }
+}
+

@@ -1,0 +1,57 @@
+
+
+.navBar {
+  position: fixed;
+  display: flex;
+  /* flex-direction: flex-end; */
+  flex-direction: row;
+  border-bottom: solid 7px #4b6640;
+  /* align-content: space-between;  */
+  background-color: #17472f;
+background-image: url("https://www.transparenttextures.com/patterns/buried.png");
+
+
+  /* height: 120px; */
+  width: 100%;
+  color: #FFFFFF;
+  
+}
+
+.bannerText {
+  display: flex;
+  align-items: center;
+  font-family: Bungee;
+  /* font-size: 15; */
+  text-indent: 1.5em;
+  width:80%;
+  justify-content: flex-start;
+}
+
+.actionText {
+  display: flex;
+  /* justify-content: flex-end; */
+  /* flex-direction: row-reverse; */
+  flex-direction: column;
+  text-indent: -33px;
+  /* width: 200%; */
+  align-content: center;
+  /* margin-right: -208em; */
+}
+
+
+.include-nav {
+  position: relative;
+  z-index: 3;
+}
+
+.fa-solid, .fas {
+  color: #FF0000;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-left: 70px;
+  margin-top: -10px;
+}
+
+/* ^^ using a css rule to place the nav infront of the header */
+
+

@@ -10,16 +10,31 @@ html {
   box-sizing: inherit;
 }
 
+
+header {
+  font-family: 'Bungee Shade', cursive;
+}
+
+
+.container {
+  display: flex;
+  /* border: 1px solid red; */
+  flex-direction: column;
+}
+
 /*
  * Global layout stuff
  */
 
 body {
+  /* margin-top: 10em; */
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
