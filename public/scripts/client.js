@@ -34,7 +34,9 @@ const createTweetElement = function(tweet) {
   let avatar = tweet.user.avatars;
   let handle = tweet.user.handle;
   let text = tweet.content.text;
-  let timeMade = timeago.format(new Date(1)); 
+  let timeMade = JSON.stringify(new Date()); 
+  console.log("timeMade: ", timeMade);
+  
   //takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet.
   const $tweet = `<article id="test-tweet">
   <img src=${avatar}>
@@ -89,6 +91,7 @@ $(document).ready(function() {
   });
 
   $("#form").submit(function( event ) {
+    
     event.preventDefault();
     let serializedText = $('#tweet-text').serialize();
     
@@ -109,7 +112,7 @@ $(document).ready(function() {
       
       $('#error-space').text("🚫 Please enter valid Input 🚫");
     }
-    else if (count >= 140) {
+    else if (parseInt($(".counter").text()) <= 0) {
       $('#error-space').animate({height: '50px', opacity: '0.8'}, "slow");
       $('#error-space').text("🚫 140 character maximum 🚫");
     }
@@ -121,17 +124,16 @@ $(document).ready(function() {
       })
       .then( (data) => {
         $('#error-space').animate({height: '0px', opacity: '0'}, "slow");
-        $('#tweet-text').empty();
+        $('#tweet-text').empty(); // i need to clear the textbox
         $('#tweet-display').prepend(createTweetElement(data));
-         // for some reason the tweet text won't empty
-        // $('#error-space').empty();
-        // console.log("fire");
+        $(".counter").text(140);
+        // the counter text resets to 140 when a tweet submits
       })
       .catch( (error) => {
         console.log("error");
       })
       
-      console.log("button pressed");
+      // console.log("button pressed");
     }
     
     

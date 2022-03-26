@@ -26,7 +26,7 @@
 
 #tweet-text {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   border: none;
   font-weight: 90000;
   background: transparent;
@@ -43,7 +43,7 @@ textarea {
   /* border: none; */
   width: 489px;
   /* height: 239px; */
-  border-bottom: 3px solid black;
+  /* border-bottom: 3px solid black; */
   /* margin-right: 3em; */
   /* margin-left: 5em; */
   
@@ -89,14 +89,14 @@ textarea {
 }
 
 #test-tweet {
-  display: flex;
-  justify-content: flex-start;
+  /* display: flex; */
+  /* justify-content: flex-start; */
   /* margin-top: 2em;
   margin-left: -32.5em; */
   height: 100px;
-  width: 500px;
+  /* width: 500px; */
   border:solid 3px black;
-  margin-top: 1em;
+  /* margin-top: 1em; */
 }
 #test-tweet img{
   width: 50px;
@@ -108,7 +108,7 @@ textarea {
   justify-content: flex-start;
   /* margin-top: -3.8em;
   margin-left: 4em; */
-  margin-left: 10px;
+  /* margin-left: 10px; */
  
   height: 10px;
 }
@@ -117,63 +117,84 @@ textarea {
   display: flex;
   justify-content: flex-end;
   font-size: 18px;
-  margin-left: 250px;
-  margin-top: 8px;
+  /* margin-left: 250px; */
+  /* margin-top: 8px; */
   /* margin-left: 15em; */
   
 }
 
 #placed-tweet {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: 18px;
   /* margin-left: 4em;  */
-  margin-left: -400px;
-    margin-top: 51px;
-  
+  /* margin-left: -400px; */
+  /* margin-top: 51px; */
 }
 
 #text-line {
   height: 500px;
-  border-top: solid 10em red;
-  border-bottom: solid 10em red;
+  /* border-top: solid 10em red; */
+  /* border-bottom: solid 10em red; */
   
 }
 
 #interaction-icon1 {
+  transition: box-shadow .3s;
   display: flex;
   /* background-color: #0000FF; */
   flex-direction: flex-end;
-  margin-top: 85px;
-  margin-left: -5em;
-  font-size: 10px;
+  /* margin-top: 85px; */
+  /* margin-left: -5em; */
+  /* font-size: 10px; */
   /* margin-top: 5em; */
+  float: left;
+  border-radius:10px;
 }
+
+#interaction-icon1:hover {
+  box-shadow: 0 0 11px rgba(80, 13, 13, 0.2); 
+  color: blue;
+}
+
+
 #interaction-icon2 {
   display: flex;
   flex-direction: flex-end;
   /* margin-left: 37em; */
-  margin-top: 85px;
-  margin-left: -5em;
-  font-size: 10px;
+  /* margin-top: 85px; */
+  /* margin-left: -5em; */
+  /* font-size: 10px; */
   /* margin-top: 5em; */
 }
+
+#interaction-icon2:hover {
+  box-shadow: 0 0 11px rgba(80, 13, 13, 0.2); 
+  color: blue;
+}
+
 
 #interaction-icon3 {
   display: flex;
   flex-direction: flex-end;
   /* margin-left: 39em; */
-  margin-top: 85px;
-  margin-left: -5em;
-  font-size: 10px;
+  /* margin-top: 85px; */
+  /* margin-left: -5em; */
+  /* font-size: 10px; */
   /* margin-top: 5em; */
 }
 
+#interaction-icon3:hover {
+  box-shadow: 0 0 11px rgba(80, 13, 13, 0.2); 
+  color: blue;
+}
+
+
 #tweet-date {
   display: flex;
-  margin-left: -25em;
+  /* margin-left: -25em; */
   font-size: 10px;
-  margin-top: 8em;
+  /* margin-top: 8em; */
 }
 
 
