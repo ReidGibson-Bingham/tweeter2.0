@@ -39,21 +39,35 @@ const createTweetElement = function(tweet) {
   
   //takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet.
   const $tweet = `<article id="test-tweet">
-  <img src=${avatar}>
-  <p id="user-display"> ${name} </p>
-  <p id="at-user"> ${handle} </p>
-  <p name="text" placeholder="your tweet" id="placed-tweet"> ${escape(text)} </p>
-  <p id="text-line"></p>
-  <p id="interaction-icon1">
-    <i class="fa-solid fa-flag"></i>
-  </p>
-  <p id="interaction-icon2">
-    <i class="fa-solid fa-retweet"></i>
-  </p>
-  <p id="interaction-icon3">
-    <i class="fa-solid fa-heart"></i>
-  </p>
-  <p id="tweet-date"> ${timeMade} </p>
+  <div style="
+    display: flex;
+    width: 100%;
+    height: 50px;
+  ">
+    <img src=${avatar}>
+    <p id="user-display"> ${name} </p>
+    <p id="at-user"> ${handle} </p>
+    <p name="text" placeholder="your tweet" id="placed-tweet"> ${escape(text)} </p>
+    <p id="text-line"></p>
+  </div>
+  <div style="
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    
+  ">
+    <p id="interaction-icon1">
+      <i class="fa-solid fa-flag"></i>
+    </p>
+    <p id="interaction-icon2">
+      <i class="fa-solid fa-retweet"></i>
+    </p>
+    <p id="interaction-icon3">
+      <i class="fa-solid fa-heart"></i>
+    </p>
+    <p id="tweet-date"> ${timeMade}</p>
+  </div>
 
   </article>`;
 

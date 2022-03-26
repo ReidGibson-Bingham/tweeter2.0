@@ -6,8 +6,8 @@
 
 
 #new-tweet {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   width: 100%;
   height: 100%;
 }
@@ -25,30 +25,19 @@
 }
 
 #tweet-text {
-  display: flex;
-  justify-content: flex-end;
+  /* display: flex;
+  justify-content: flex-end; */
   border: none;
-  font-weight: 90000;
+  /* font-weight: 90000; */
   background: transparent;
   /* color: transparent; */
   /* margin-left: 5em; */
   border-bottom: 3px solid black;
   height: 50px;
-  width: 500px;
+  width: 100%;
 }
 
-textarea {
-  display: flex;
-  justify-content: center;
-  /* border: none; */
-  width: 489px;
-  /* height: 239px; */
-  /* border-bottom: 3px solid black; */
-  /* margin-right: 3em; */
-  /* margin-left: 5em; */
-  
-  
-}
+
 
 
 .button {
@@ -82,6 +71,7 @@ textarea {
   justify-content: flex-start;
   /* align-items: center; */
   flex-direction: column;
+  width: 800px;
   /* height: 50px; */
   /* margin-top: 0em; */
   /* margin-left: 5em; */
@@ -89,15 +79,17 @@ textarea {
 }
 
 #test-tweet {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
   /* justify-content: flex-start; */
   /* margin-top: 2em;
   margin-left: -32.5em; */
   height: 100px;
   /* width: 500px; */
   border:solid 3px black;
-  /* margin-top: 1em; */
+  margin-top: 1em;
 }
+
 #test-tweet img{
   width: 50px;
   height: 50px;
@@ -109,6 +101,8 @@ textarea {
   /* margin-top: -3.8em;
   margin-left: 4em; */
   /* margin-left: 10px; */
+  margin-top: 8px;
+  margin-left: 3px;
  
   height: 10px;
 }
@@ -117,6 +111,8 @@ textarea {
   display: flex;
   justify-content: flex-end;
   font-size: 18px;
+  margin-top: 8px;
+  margin-left: 3px;
   /* margin-left: 250px; */
   /* margin-top: 8px; */
   /* margin-left: 15em; */
@@ -124,9 +120,12 @@ textarea {
 }
 
 #placed-tweet {
-  display: flex;
+  font-size: 24px;
+  margin-left: 24px;
+  margin-top: 25px;
+  /* display: flex;
   justify-content: flex-start;
-  font-size: 18px;
+  font-size: 18px; */
   /* margin-left: 4em;  */
   /* margin-left: -400px; */
   /* margin-top: 51px; */
@@ -139,11 +138,14 @@ textarea {
   
 }
 
+
+
 #interaction-icon1 {
   transition: box-shadow .3s;
   display: flex;
   /* background-color: #0000FF; */
   flex-direction: flex-end;
+  width: 50px;
   /* margin-top: 85px; */
   /* margin-left: -5em; */
   /* font-size: 10px; */
@@ -154,13 +156,14 @@ textarea {
 
 #interaction-icon1:hover {
   box-shadow: 0 0 11px rgba(80, 13, 13, 0.2); 
-  color: blue;
+  text-shadow: 0 0 10px blue;
 }
 
 
 #interaction-icon2 {
   display: flex;
   flex-direction: flex-end;
+  width: 50px;
   /* margin-left: 37em; */
   /* margin-top: 85px; */
   /* margin-left: -5em; */
@@ -170,7 +173,7 @@ textarea {
 
 #interaction-icon2:hover {
   box-shadow: 0 0 11px rgba(80, 13, 13, 0.2); 
-  color: blue;
+  text-shadow: 0 0 10px blue;
 }
 
 
@@ -185,16 +188,17 @@ textarea {
 }
 
 #interaction-icon3:hover {
-  box-shadow: 0 0 11px rgba(80, 13, 13, 0.2); 
-  color: blue;
+  box-shadow: 0 0 11px rgba(80, 13, 13, 0.2);
+  text-shadow: 0 0 10px blue;
 }
 
 
 #tweet-date {
   display: flex;
   /* margin-left: -25em; */
-  font-size: 10px;
+  font-size: 14px;
   /* margin-top: 8em; */
+  margin-left: 550px;
 }
 
 
@@ -204,7 +208,7 @@ textarea {
     justify-content: flex-end;
     align-items: flex-start;
     margin-top: -19em;
-    margin-right: 3em;
+    /* margin-right: 3em; */
     /* border: solid 5px red; */
   }
 }
