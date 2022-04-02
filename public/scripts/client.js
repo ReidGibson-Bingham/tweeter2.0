@@ -37,8 +37,8 @@ const createTweetElement = function(tweet) {
   let timeMade = JSON.stringify(new Date()); 
   console.log("timeMade: ", timeMade);
   
-  //takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet.
   const $tweet = `<article id="test-tweet">
+
   <div style="
     display: flex;
     width: 100%;
@@ -47,16 +47,20 @@ const createTweetElement = function(tweet) {
     <img src=${avatar}>
     <p id="user-display"> ${name} </p>
     <p id="at-user"> ${handle} </p>
-    <p name="text" placeholder="your tweet" id="placed-tweet"> ${escape(text)} </p>
-    <p id="text-line"></p>
+
   </div>
+
   <div style="
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: flex-end;
-    
+    margin-top: -75px;
+    font-size: 21px;
   ">
+
+    <p id="tweet-date"> ${timeMade}</p>
+
     <p id="interaction-icon1">
       <i class="fa-solid fa-flag"></i>
     </p>
@@ -66,12 +70,12 @@ const createTweetElement = function(tweet) {
     <p id="interaction-icon3">
       <i class="fa-solid fa-heart"></i>
     </p>
-    <p id="tweet-date"> ${timeMade}</p>
+    
   </div>
+  <p name="text" placeholder="your tweet" id="placed-tweet" style="
+  margin-left: 140px; margin-top: 5px;"> ${escape(text)} </p>
 
   </article>`;
-
-  // $('#placed-tweet').text(`${text}`);
 
   return $tweet;
 }
@@ -82,21 +86,16 @@ const renderTweets = function(tweets) {
     $('#tweet-display').prepend(createTweetElement(tweet));
     console.log(tweet);
   }
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
-  // This function can be responsible for taking in an array of tweet objects and then appending each one to the #tweets-container. In order to do this, the renderTweets will need to leverage the createTweetElement function you wrote earlier by passing the tweet object to it, then using the returned jQuery object by appending it to the #tweets-container section.
 }
 
-
-
 $(document).ready(function() {
-  console.log("client.js ready");
 
-  // console.log("rendered Tweets:", renderTweets(tweets))
   let count = 0;
 
+  console.log("client.js ready");
+
   $('#tweet-text').keypress(function(event) {
+
     count++;
     input = $('#tweet-text').val();
   
@@ -107,21 +106,12 @@ $(document).ready(function() {
   $("#form").submit(function( event ) {
     
     event.preventDefault();
-    let serializedText = $('#tweet-text').serialize();
-    
-    
-    // alert( "'Button clicked, performing ajax call...'" );
-    // $('#placed-tweet').append(input);
-    
-    // console.log("type of serializedText: ", typeof serializedText);
-    //console.log("length of a typical nothing character: ", ''.length);
-    // console.log("serialized text: ", serializedText);
-   
 
-    if (serializedText === 'text=' || serializedText === 'text=%20') { // if no input is provided or if only a space is provided
+    let serializedText = $('#tweet-text').serialize();
+
+    if (serializedText === 'text=' || serializedText === 'text=%20') { 
       console.log("error detected");
-      //alert("Please enter valid input");
-      // If the user submits a tweet that fails validation, an appropriately styled error message slides into view.
+      
       $('#error-space').animate({height: '50px', opacity: '0.8'}, "slow");
       
       $('#error-space').text("🚫 Please enter valid Input 🚫");
@@ -130,7 +120,7 @@ $(document).ready(function() {
       $('#error-space').animate({height: '50px', opacity: '0.8'}, "slow");
       $('#error-space').text("🚫 140 character maximum 🚫");
     }
-    else { // else the form is allowed to submit
+    else { 
       $.ajax({
         type: "POST",
         url: "/tweets",
@@ -147,23 +137,7 @@ $(document).ready(function() {
         console.log("error");
       })
       
-      // console.log("button pressed");
     }
-    
-    
-
-    
-    
-    // i couldn't figure out how to use preventDefault() when loadtweets() has no event parameter and it's outside of my submit function, so i just included it inside my submit function to be able to use the event parameter. 
-    // though, My page doesn't immediately load all the tweets upon first visit, now a user has to submit a tweet before seeing all the tweets
-    
-    
-    
-    // if (serializedText.length <= 8) {
-    //   console.log("bad input");
-    //   alert("Incorrect Input");
-    // } // serialized type is a string, but inputting a space character gives me a length of 8 and inputting nothing gives me a space of 5 when a space would normally have a value of 1 and nothing would normally have a value of 0
-
 
   });
 
@@ -175,7 +149,7 @@ $(document).ready(function() {
     })
     .then( (hello) => {
       renderTweets(hello);
-      // console.log("redered tweets: ", renderTweets(data));
+
       console.log("data: ", hello);
       
       console.log("count: ", count);
@@ -189,40 +163,7 @@ $(document).ready(function() {
     })
   }
 
-
   loadTweets();
-  
-
- 
-  // Inside your client.js file and within the document ready function, define a function called loadTweets that is responsible for fetching tweets from the http://localhost:8080/tweets page.
-
-  
-
-
-  // $(".button").click(function() { // i've placed it to hover now because click forces the form to POST to /tweet/
-  //   //alert( "Handler for .click() called." );
-  //   $('#placed-tweet').append(input);
-  //   $('#tweet-display').append(createTweetElement(tweetData));
-  //   // createTweetElement("#placed-tweet").append(tweetData.content.text);
-  // });
-  
-  
-
+    
 });
-
-
-
-
-
-// a helpful function for obtaining input from the textarea
-
-// let input = '';
-
-//   $('#tweet-text').keypress(function(event) {
-    
-//     input = $('#tweet-text').val();
-  
-//     console.log("input: ", input);
-    
-//   });  
 

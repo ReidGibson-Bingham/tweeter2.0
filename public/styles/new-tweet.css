@@ -2,20 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 40px;
 }
 
-
 #new-tweet {
-  /* display: flex;
-  justify-content: center; */
   width: 100%;
   height: 100%;
 }
-
-/* .text {
-  display: flex;
-  justify-content: flex-end;
-} */
 
 .include-tweet {
   display: flex;
@@ -25,20 +18,12 @@
 }
 
 #tweet-text {
-  /* display: flex;
-  justify-content: flex-end; */
   border: none;
-  /* font-weight: 90000; */
   background: transparent;
-  /* color: transparent; */
-  /* margin-left: 5em; */
   border-bottom: 3px solid black;
   height: 50px;
   width: 100%;
 }
-
-
-
 
 .button {
   display: flex;
@@ -48,7 +33,6 @@
   color: white;
   font-family: Bungee;
   margin-top: 0.5em;
-  /* margin-left: 5em; */
 }
 
 .counter {
@@ -60,32 +44,17 @@
   font-family: Bungee
 }
 
-/* Below are the styles used for the lower tweets, I will make a new file to organize these */
-
-/* :root {
-  --top: 40px;
-} */
-
 #tweet-display {
   display: flex;
   justify-content: flex-start;
-  /* align-items: center; */
   flex-direction: column;
   width: 800px;
-  /* height: 50px; */
-  /* margin-top: 0em; */
-  /* margin-left: 5em; */
-
 }
 
 #test-tweet {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
-  /* margin-top: 2em;
-  margin-left: -32.5em; */
   height: 100px;
-  /* width: 500px; */
   border:solid 3px black;
   margin-top: 1em;
 }
@@ -94,16 +63,13 @@
   width: 50px;
   height: 50px;
 }
+
 #user-display {
   display: flex;
   font-size: 18px;
   justify-content: flex-start;
-  /* margin-top: -3.8em;
-  margin-left: 4em; */
-  /* margin-left: 10px; */
   margin-top: 8px;
   margin-left: 3px;
- 
   height: 10px;
 }
 
@@ -112,46 +78,21 @@
   justify-content: flex-end;
   font-size: 18px;
   margin-top: 8px;
-  margin-left: 3px;
-  /* margin-left: 250px; */
-  /* margin-top: 8px; */
-  /* margin-left: 15em; */
-  
-}
-
-#placed-tweet {
-  font-size: 24px;
-  margin-left: 24px;
-  margin-top: 25px;
-  /* display: flex;
-  justify-content: flex-start;
-  font-size: 18px; */
-  /* margin-left: 4em;  */
-  /* margin-left: -400px; */
-  /* margin-top: 51px; */
+  margin-left: 550px;
 }
 
 #text-line {
   height: 500px;
-  /* border-top: solid 10em red; */
-  /* border-bottom: solid 10em red; */
-  
 }
-
-
 
 #interaction-icon1 {
   transition: box-shadow .3s;
   display: flex;
-  /* background-color: #0000FF; */
   flex-direction: flex-end;
-  width: 50px;
-  /* margin-top: 85px; */
-  /* margin-left: -5em; */
-  /* font-size: 10px; */
-  /* margin-top: 5em; */
+  width: 40px;
   float: left;
   border-radius:10px;
+  margin-top: 100px;
 }
 
 #interaction-icon1:hover {
@@ -159,16 +100,11 @@
   text-shadow: 0 0 10px blue;
 }
 
-
 #interaction-icon2 {
   display: flex;
   flex-direction: flex-end;
-  width: 50px;
-  /* margin-left: 37em; */
-  /* margin-top: 85px; */
-  /* margin-left: -5em; */
-  /* font-size: 10px; */
-  /* margin-top: 5em; */
+  width: 40px;
+  margin-top: 100px;
 }
 
 #interaction-icon2:hover {
@@ -176,15 +112,10 @@
   text-shadow: 0 0 10px blue;
 }
 
-
 #interaction-icon3 {
   display: flex;
   flex-direction: flex-end;
-  /* margin-left: 39em; */
-  /* margin-top: 85px; */
-  /* margin-left: -5em; */
-  /* font-size: 10px; */
-  /* margin-top: 5em; */
+  margin-top: 100px;
 }
 
 #interaction-icon3:hover {
@@ -192,15 +123,13 @@
   text-shadow: 0 0 10px blue;
 }
 
-
 #tweet-date {
   display: flex;
-  /* margin-left: -25em; */
   font-size: 14px;
-  /* margin-top: 8em; */
-  margin-left: 550px;
+  margin-right: 450px;
+  margin-top: 80px;
+  margin-left: 20px;
 }
-
 
 @media only screen and (min-width: 1024px) {
   .root {
@@ -208,8 +137,6 @@
     justify-content: flex-end;
     align-items: flex-start;
     margin-top: -19em;
-    /* margin-right: 3em; */
-    /* border: solid 5px red; */
   }
 }
 

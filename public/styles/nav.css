@@ -1,17 +1,10 @@
-
-
 .navBar {
   position: fixed;
   display: flex;
-  /* flex-direction: flex-end; */
   flex-direction: row;
   border-bottom: solid 7px #4b6640;
-  /* align-content: space-between;  */
   background-color: #17472f;
-background-image: url("https://www.transparenttextures.com/patterns/buried.png");
-
-
-  /* height: 120px; */
+  background-image: url("https://www.transparenttextures.com/patterns/buried.png");
   width: 100%;
   color: #FFFFFF;
   
@@ -21,7 +14,6 @@ background-image: url("https://www.transparenttextures.com/patterns/buried.png")
   display: flex;
   align-items: center;
   font-family: Bungee;
-  /* font-size: 15; */
   text-indent: 1.5em;
   width:80%;
   justify-content: flex-start;
@@ -29,15 +21,10 @@ background-image: url("https://www.transparenttextures.com/patterns/buried.png")
 
 .actionText {
   display: flex;
-  /* justify-content: flex-end; */
-  /* flex-direction: row-reverse; */
   flex-direction: column;
   text-indent: -33px;
-  /* width: 200%; */
   align-content: center;
-  /* margin-right: -208em; */
 }
-
 
 .include-nav {
   position: relative;

@@ -18,8 +18,6 @@ header {
   margin-top: -10px;
   justify-content: flex-start;
   align-items: flex-start;
-  /* width: 100%;
-  height: 50%;  */
   color: #FFFFFF;
   font-family: source sans pro;
 }
@@ -29,30 +27,18 @@ header {
   font-size: 15px;
 } 
 
-
-
-/* The header should have a height of 400px and be 100% the width of its parent container
-The avatar should be centered vertically and horizontally (Hint: the justify-content and align-items properties are helpful for centering things if you're using Flexbox.)
-The name should be centered below the avatar
-The background-color should be a different colour than the nav and the body */
-
 @media only screen and (min-width: 1024px) {
 
   #header {
     display:flex;
     background-color: #f4f1ec;
-    
-    /* flex-direction: row; */
     justify-content: flex-start;
     align-items: flex-end;
-    /* border: solid 5px red; */
-    /* margin-top: 50px; */
   }
 
   header {
     border: solid 7px #4b6640;
     display: flex;
-    /* border: solid 5px red; */
     margin-top: 6em;
     height: 450px;
     flex-direction: column;
@@ -60,24 +46,16 @@ The background-color should be a different colour than the nav and the body */
     justify-content: center;
     align-items: center;
     margin-left: 2em;
-    /* margin-bottom: 2em; */
-    /* margin-right: 2em; */
-    /* margin-top: 100px; */
     background-color: #4b6640;
-  background-image: url("https://www.transparenttextures.com/patterns/buried.png");
+    background-image: url("https://www.transparenttextures.com/patterns/buried.png");
   } 
 
   .usernameBanner {
     display: flex;
     font-size: 30px;
-    /* margin-bottom: -3em;
-    margin-top: -10px; */
     justify-content: flex-start;
     align-items: center;
-    /* width: 100%;
-    height: 50%;  */
     color: #FFFFFF;
-    /* font-family: 'Times New Roman', Times, serif; */
   }
 
  .avatar {
