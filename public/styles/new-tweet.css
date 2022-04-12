@@ -112,6 +112,7 @@ i:hover {
   font-size: 14px;
 }
 
+/* below changes the layout to fit both desktop and mobile/tablet screen sizes*/
 @media only screen and (min-width: 1024px) {
   .root {
     display: flex;

@@ -40,6 +40,8 @@
 
 }
 
+/* I got this animation from https://stackoverflow.com/questions/23152900/how-to-create-bouncing-div-animation */
+
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0); }
@@ -74,6 +76,5 @@
     -o-transform: translateY(-15px);
     transform: translateY(-15px); } }
 
-/* ^^ using a css rule to place the nav infront of the header */
-
+/* I got this animation from https://stackoverflow.com/questions/23152900/how-to-create-bouncing-div-animation */
 

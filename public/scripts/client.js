@@ -1,8 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+
 let tweets = [];
 
 const tweetData = {
@@ -26,46 +22,6 @@ const escape = function (str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-
-{/* <div style="
-display: flex;
-width: 100%;
-height: 50px;
-">
-<img src=${avatar}>
-<p id="user-display"> ${name} </p>
-<p id="at-user"> ${handle} </p>
-
-</div>
-
-<p name="text" placeholder="your tweet" id="placed-tweet" style="
-margin-left: 140px; margin-top: 5px;"> ${escape(text)} </p>
-
-<div style="
-width: 100%;
-height: 50px;
-display: flex;
-justify-content: flex-end;
-margin-top: -75px;
-font-size: 21px;
-">
-
-<p id="tweet-date"> ${timeMade}</p>
-
-<p id="interaction-icon1">
-  <i class="fa-solid fa-flag"></i>
-</p>
-<p id="interaction-icon2">
-  <i class="fa-solid fa-retweet"></i>
-</p>
-<p id="interaction-icon3">
-  <i class="fa-solid fa-heart"></i>
-</p>
-
-</div>
-
-
-</article>` */}
 
 const createTweetElement = function(tweet) {
 
@@ -147,10 +103,12 @@ $(document).ready(function() {
       
       $('#error-space').text("🚫 Please enter valid Input 🚫");
     }
+
     else if ($("#tweet-text").val().length > max_tweet) {
       $('#error-space').animate({height: '50px', opacity: '0.8'}, "slow");
       $('#error-space').text("🚫 140 character maximum 🚫");
     }
+
     else { 
       $.ajax({
         type: "POST",
@@ -159,7 +117,6 @@ $(document).ready(function() {
       })
       .then( (data) => {
         $('#error-space').animate({height: '0px', opacity: '0'}, "slow");
-        $('#tweet-text').empty(); // i need to clear the textbox
         $('#tweet-display').prepend(createTweetElement(data));
         $(".counter").text(max_tweet);
         // the counter text resets to 140 when a tweet submits
@@ -167,7 +124,6 @@ $(document).ready(function() {
       .catch( (error) => {
         console.log("error");
       })
-      
     }
 
   });
