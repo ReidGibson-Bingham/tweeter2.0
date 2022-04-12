@@ -27,53 +27,83 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
-const createTweetElement = function(tweet) {
+{/* <div style="
+display: flex;
+width: 100%;
+height: 50px;
+">
+<img src=${avatar}>
+<p id="user-display"> ${name} </p>
+<p id="at-user"> ${handle} </p>
 
+</div>
+
+<p name="text" placeholder="your tweet" id="placed-tweet" style="
+margin-left: 140px; margin-top: 5px;"> ${escape(text)} </p>
+
+<div style="
+width: 100%;
+height: 50px;
+display: flex;
+justify-content: flex-end;
+margin-top: -75px;
+font-size: 21px;
+">
+
+<p id="tweet-date"> ${timeMade}</p>
+
+<p id="interaction-icon1">
+  <i class="fa-solid fa-flag"></i>
+</p>
+<p id="interaction-icon2">
+  <i class="fa-solid fa-retweet"></i>
+</p>
+<p id="interaction-icon3">
+  <i class="fa-solid fa-heart"></i>
+</p>
+
+</div>
+
+
+</article>` */}
+
+const createTweetElement = function(tweet) {
 
   let name = tweet.user.name;
   let avatar = tweet.user.avatars;
   let handle = tweet.user.handle;
   let text = tweet.content.text;
-  let timeMade = JSON.stringify(new Date()); 
-  console.log("timeMade: ", timeMade);
+  let timeMade = timeago.format(tweet.created_at); 
   
   const $tweet = `<article id="test-tweet">
 
-  <div style="
-    display: flex;
-    width: 100%;
-    height: 50px;
-  ">
-    <img src=${avatar}>
-    <p id="user-display"> ${name} </p>
+  <div class="tweet-header">
+
+    <div class="tweet-avatar">
+      <img src=${avatar}>
+      <p id="user-display"> ${name} </p>
+    </div>
+
     <p id="at-user"> ${handle} </p>
 
   </div>
 
-  <div style="
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -75px;
-    font-size: 21px;
-  ">
+  <p class="tweet-body" name="text" placeholder="your tweet"> ${escape(text)} </p>
+
+  <div class="tweet-footer">
 
     <p id="tweet-date"> ${timeMade}</p>
 
-    <p id="interaction-icon1">
+    <div class="tweet-icons">
+
       <i class="fa-solid fa-flag"></i>
-    </p>
-    <p id="interaction-icon2">
       <i class="fa-solid fa-retweet"></i>
-    </p>
-    <p id="interaction-icon3">
       <i class="fa-solid fa-heart"></i>
-    </p>
+    
+    </div>  
     
   </div>
-  <p name="text" placeholder="your tweet" id="placed-tweet" style="
-  margin-left: 140px; margin-top: 5px;"> ${escape(text)} </p>
+  
 
   </article>`;
 
@@ -91,6 +121,7 @@ const renderTweets = function(tweets) {
 $(document).ready(function() {
 
   let count = 0;
+  const max_tweet = 140;
 
   console.log("client.js ready");
 
@@ -116,7 +147,7 @@ $(document).ready(function() {
       
       $('#error-space').text("🚫 Please enter valid Input 🚫");
     }
-    else if (parseInt($(".counter").text()) <= 0) {
+    else if ($("#tweet-text").val().length > max_tweet) {
       $('#error-space').animate({height: '50px', opacity: '0.8'}, "slow");
       $('#error-space').text("🚫 140 character maximum 🚫");
     }
@@ -130,7 +161,7 @@ $(document).ready(function() {
         $('#error-space').animate({height: '0px', opacity: '0'}, "slow");
         $('#tweet-text').empty(); // i need to clear the textbox
         $('#tweet-display').prepend(createTweetElement(data));
-        $(".counter").text(140);
+        $(".counter").text(max_tweet);
         // the counter text resets to 140 when a tweet submits
       })
       .catch( (error) => {

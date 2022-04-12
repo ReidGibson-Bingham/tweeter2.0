@@ -6,13 +6,9 @@ $(document).ready(function() {
 
   const $counter = $(".counter");
   
-  $("#tweet-text").keydown(function(event) {
-    
-    if (event.originalEvent.key === 'Backspace' && count < 140) {
-      count++;
-    } else {
-      count--;
-    }
+  $("#tweet-text").keyup(function(event) {
+
+    count = 140 - $("#tweet-text").val().length;
     
     if (count < 0) { 
       $counter.css('color', 'red');
@@ -20,7 +16,6 @@ $(document).ready(function() {
     } else {
       $counter.css('color', 'black');
       $counter.text(count);
-
     }
 
   });
